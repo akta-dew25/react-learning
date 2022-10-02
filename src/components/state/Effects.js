@@ -9,19 +9,24 @@ function Effects() {
       setNumber(number - 1);
     }
   }
+
+  //executes onmount
   useEffect(() => {
     // alert("Component Mounted");
     console.log("Component Mounted");
-    // return {
-    //   // console.log("component destroyed")
-    // };
+    return {
+      //executes on unmount
+      // console.log("component destroyed")
+    };
   }, []);
 
+  // executes on depensency changes
   useEffect(() => {
     // alert("Number Changed ");
     console.log("Number Changed ");
   }, [number]);
 
+  // executes on any state change
   useEffect(() => {
     // alert("Component state changed ");
     console.log("Component state changed ");
