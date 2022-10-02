@@ -14,9 +14,10 @@ function Effects() {
   useEffect(() => {
     // alert("Component Mounted");
     console.log("Component Mounted");
-    return {
-      //executes on unmount
-      // console.log("component destroyed")
+
+    return () => {
+      //this block executes on unmount of component
+      console.log("Component Unmounted");
     };
   }, []);
 
