@@ -3,6 +3,9 @@ import "./App.css";
 import MyJSX from "./components/jsx/MyJSX";
 import MyClass from "./components/classcomponents/MyClass";
 import MyState from "./components/state/MyState";
+import ClickCount from "./components/state/ClickCount";
+import IncrementDecrement from "./components/state/IncrementDecrement";
+import Effects from "./components/state/Effects";
 
 function App() {
   return (
@@ -10,6 +13,9 @@ function App() {
       <MyJSX />
       <MyClass />
       <MyState />
+      <ClickCount />
+      <IncrementDecrement />
+      <Effects />
     </div>
   );
 }
