@@ -4,7 +4,7 @@ import React from "react";
 function Hello() {
   useEffect(() => {
     return () => {
-      console.log("Destoyed");
+      console.log("Hello Component Destoyed- cleanining up Hello's resources");
     };
   }, []);
 

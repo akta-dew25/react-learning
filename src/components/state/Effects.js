@@ -10,24 +10,27 @@ function Effects() {
     }
   }
   useEffect(() => {
-    alert("Component Mounted");
+    // alert("Component Mounted");
+    console.log("Component Mounted");
     // return {
     //   // console.log("component destroyed")
     // };
   }, []);
 
   useEffect(() => {
-    alert("Number Changed ");
+    // alert("Number Changed ");
+    console.log("Number Changed ");
   }, [number]);
 
   useEffect(() => {
-    alert("Component state changed ");
+    // alert("Component state changed ");
+    console.log("Component state changed ");
   });
 
   return (
     <div>
       <h1>useEffect</h1>
-      <button onClick={() => decrementNumber}>-</button>
+      <button onClick={() => decrementNumber()}>-</button>
       <button>{number}</button>
       <button onClick={(e) => setNumber(number + 1)}>+</button>
       <br />
