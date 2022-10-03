@@ -6,7 +6,7 @@ import MyState from "./components/state/MyState";
 import ClickCount from "./components/state/ClickCount";
 import IncrementDecrement from "./components/state/IncrementDecrement";
 import Effects from "./components/state/Effects";
-
+import HTMLPDF from "./components/HTMLPDF";
 function App() {
   return (
     <div className="App">
@@ -16,6 +16,7 @@ function App() {
       <ClickCount />
       <IncrementDecrement />
       <Effects />
+      <HTMLPDF />
     </div>
   );
 }
