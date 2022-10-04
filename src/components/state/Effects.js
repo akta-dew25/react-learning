@@ -16,16 +16,19 @@ function Effects() {
     //   // console.log("component destroyed")
     // };
   }, []);
+  //   on load
 
   useEffect(() => {
     // alert("Number Changed ");
     console.log("Number Changed ");
   }, [number]);
+  //   when state chenged
 
   useEffect(() => {
     // alert("Component state changed ");
     console.log("Component state changed ");
   });
+  //   any state changed
 
   return (
     <div>
