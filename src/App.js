@@ -7,16 +7,18 @@ import ClickCount from "./components/state/ClickCount";
 import IncrementDecrement from "./components/state/IncrementDecrement";
 import Effects from "./components/state/Effects";
 import HTMLPDF from "./components/HTMLPDF";
+import StateRevision from "./components/state/StateRevision";
 function App() {
   return (
     <div className="App">
-      <MyJSX />
+      {/* <MyJSX />
       <MyClass />
       <MyState />
       <ClickCount />
       <IncrementDecrement />
       <Effects />
-      <HTMLPDF />
+      <HTMLPDF /> */}
+      <StateRevision />
     </div>
   );
 }
