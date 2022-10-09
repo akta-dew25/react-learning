@@ -10,11 +10,6 @@ function StateRevision() {
       setShowError(true);
     } else {
       setInput({ ...input, [field]: +value });
-      // if (field === "length" && input.width > 0) {
-      //   setInput({ ...input, [field]: +value });
-      // } else if (field === "width" && input.length > 0) {
-      //   setInput({ ...input, [field]: +value });
-      // }
     }
   }
 
@@ -47,13 +42,11 @@ function StateRevision() {
         <input
           placeholder="enter length"
           type="text"
-          // value={input.legth}
           onChange={(e) => InputChange("length", e.target.value)}
         />
         <input
           placeholder="enter width"
           type="text"
-          // value={input.width}
           onChange={(e) => InputChange("width", e.target.value)}
         />
         {showError ? (
