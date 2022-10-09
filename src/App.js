@@ -8,17 +8,19 @@ import IncrementDecrement from "./components/state/IncrementDecrement";
 import Effects from "./components/state/Effects";
 import HTMLPDF from "./components/HTMLPDF";
 import StateRevision from "./components/state/StateRevision";
+import Parent from "./components/props/Parent";
 function App() {
   return (
     <div className="App">
       {/* <MyJSX />
       <MyClass />
       <MyState />
+      <Effects />
       <ClickCount />
       <IncrementDecrement />
-      <Effects />
-      <HTMLPDF /> */}
-      <StateRevision />
+      <HTMLPDF /> 
+    <StateRevision />*/}
+      <Parent />
     </div>
   );
 }
