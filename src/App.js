@@ -13,6 +13,9 @@ import AddEmployee from "./components/props/propsrevision/AddEmployee";
 import AddStudent from "./components/props/proprevision2/AddStudent";
 import Cars from "./components/props/propsrevision3/Cars";
 import ClickButton from "./components/state/ClickButton";
+import Conditional from "./components/other/Conditional";
+import Operator from "./components/other/Operator";
+
 function App() {
   return (
     <div className="App">
@@ -29,8 +32,10 @@ function App() {
    
     <Cars />
     <AddEmployee />
-      */}
       <ClickButton />
+      <Conditional />
+      */}
+      <Operator />
     </div>
   );
 }
