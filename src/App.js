@@ -9,6 +9,10 @@ import Effects from "./components/state/Effects";
 import HTMLPDF from "./components/HTMLPDF";
 import StateRevision from "./components/state/StateRevision";
 import Parent from "./components/props/Parent";
+import AddEmployee from "./components/props/propsrevision/AddEmployee";
+import AddStudent from "./components/props/proprevision2/AddStudent";
+import Cars from "./components/props/propsrevision3/Cars";
+import ClickButton from "./components/state/ClickButton";
 function App() {
   return (
     <div className="App">
@@ -19,8 +23,14 @@ function App() {
       <ClickCount />
       <IncrementDecrement />
       <HTMLPDF /> 
-    <StateRevision />*/}
-      <Parent />
+    <StateRevision />
+    <Parent />
+    <AddStudent />
+   
+    <Cars />
+    <AddEmployee />
+      */}
+      <ClickButton />
     </div>
   );
 }
