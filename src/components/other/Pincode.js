@@ -17,13 +17,14 @@ let s = 0;
 result.Sheet1.map((row) => {
   let multipleArea = row?.C?.split(",");
   multipleArea?.map((area, i) => {
-    ++s;
-    // console.log(area.length);
-    splittedJson.push({
-      sl: s,
-      pinCode: row?.B || "NA",
-      areaName: area || "NA",
-    });
+    if (row?.B && row?.C && row?.B !== "NA" && row?.C !== "NA") {
+      ++s;
+      splittedJson.push({
+        sl: String(s).replace(" ", ""),
+        pinCode: row?.B || "NA",
+        areaName: area || "NA",
+      });
+    }
   });
 });
 

@@ -31,11 +31,13 @@ function App() {
     <AddStudent />
    
     <Cars />
-    <AddEmployee />
-      <ClickButton />
-      <Conditional />
-      */}
-      <Operator />
+    <ClickButton />
+    <Conditional />
+    <Operator />
+    
+  */}
+
+      <AddEmployee />
     </div>
   );
 }
