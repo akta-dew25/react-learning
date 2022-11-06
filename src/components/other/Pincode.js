@@ -5,13 +5,6 @@ const json2xls = require("json2xls");
 const result = excelToJson({
   source: fs.readFileSync("ok.xlsx"), // fs.readFileSync return a Buffer
 });
-
-let sheetNames = Object.keys(result);
-
-// sheetNames.forEach((sh) => {
-//   console.log(result[sh].length);
-// });
-
 let splittedJson = [];
 let s = 0;
 result.Sheet1.map((row) => {
@@ -30,4 +23,4 @@ result.Sheet1.map((row) => {
 
 console.log(JSON.stringify(splittedJson));
 
-// console.log(result?.sheet1?.length);
+//convert JSOn back to Excel file
