@@ -9,5 +9,5 @@ var users = [
 // var output = users.map((user) => ({ ...user, salary: user.salary + 500 }));
 // console.log(output);
 
-var output = users.map((user) => (user.id == 5 ? user : null));
-console.log(output);
+// var output = users.map((user) => (user.id == 5 ? user : null));
+// console.log(output);
