@@ -1,8 +1,6 @@
 // ES6 omiting return and {} in arrow functions
 
-const { getActiveElement } = require("@testing-library/user-event/dist/utils");
-
-let arr = [1, 2, 3, 4];
+// let arr = [1, 2, 3, 4];
 
 // map(element,index,wholeArray)
 

@@ -19,6 +19,11 @@
 // let result = arr.map((u) => (u % 2 === 0 ? u * u * u : u * u));
 // console.log(result);
 
+//return [true/false]
+// let number = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+// var output = number.map((n) => n % 2 !== 0);
+// console.log(output);
+
 // let numbers = [123, 91, 27, 28, 81, 90, 92];
 
 // let divide = numbers.map((e) => (e % 3 === 0 ? e : null));
