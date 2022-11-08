@@ -1,9 +1,21 @@
-let number = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-var output = number.map((n) => n % 2 !== 0);
+//map and filter return array but in order to return any type(string,number,boolean, object, array)
+//  we use map
 
-// with conditional return
-var output = number.filter((n) => (n % 2 !== 0 ? n : null));
+// NOTE: syntax
+var initialValueOfResult = 0;
+var output = [1, 2, 3].reduce((result, current) => {
+  return result + current;
+}, initialValueOfResult);
 console.log(output);
 
-var output = number.filter((n) => n % 2 !== 0);
-console.log(output);
+// let number = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+//return number from reduce
+
+//return string from reduce
+
+//return boolean from reduce
+
+//return object from reduce
+
+//return array from reduce
