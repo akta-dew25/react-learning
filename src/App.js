@@ -15,6 +15,9 @@ import Cars from "./components/props/propsrevision3/Cars";
 import ClickButton from "./components/state/ClickButton";
 import Conditional from "./components/other/Conditional";
 import Operator from "./components/other/Operator";
+import Get from "./components/API/Get";
+import Post from "./components/API/Post";
+import UserList from "./components/API/UserList";
 
 function App() {
   return (
@@ -34,10 +37,12 @@ function App() {
     <ClickButton />
     <Conditional />
     <Operator />
+    <AddEmployee />
     
+      <Get />
+      <Post />
   */}
-
-      <AddEmployee />
+      <UserList />
     </div>
   );
 }
