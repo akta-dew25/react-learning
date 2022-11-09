@@ -10,7 +10,6 @@ function App() {
     fetch(`https://reqres.in/api/users`)
       .then((response) => response.json())
       .then((actualData) => {
-        console.log(actualData);
         setUserList(actualData.data);
       })
       .catch((err) => {
@@ -24,6 +23,8 @@ function App() {
 
   return (
     <>
+      {selectedUser ? <SingleUser id={selectedUser} /> : null}
+
       <tbody>
         <tr>
           <th>Id</th>
@@ -34,7 +35,7 @@ function App() {
           <th>User Detail</th>
         </tr>
         {userList?.map((item, index) => (
-          <tr key={index}>
+          <tr key={index} onClick={() => setSelectedUser(item.id)}>
             <td>{item.id}</td>
             <td>{item.email}</td>
             <td>{item.first_name}</td>
@@ -45,7 +46,6 @@ function App() {
           </tr>
         ))}
       </tbody>
-      <SingleUser id={selectedUser} />
     </>
   );
 }

@@ -1,21 +1,22 @@
 import React, { useState, useEffect } from "react";
+import axios from "axios";
 
 function SingleUser({ id }) {
-  const [singleUserApi, setSingleUserApi] = useState(id);
+  const [singleUserApi, setSingleUserApi] = useState(null);
 
-  const getUser = () => {
-    fetch(`https://reqres.in/api/users/2`)
-      .then((response) => response.json())
-      .then((singleData) => {
-        setSingleUserApi(singleData.support);
-      });
+  const getUser = async (userid) => {
+    let userDetails = await axios.get(`https://reqres.in/api/users/${userid}`);
+    setSingleUserApi(userDetails?.data);
   };
   useEffect(() => {
-    //api with id
-    // set state for single user
+    getUser(id);
   }, [id]);
 
-  return <></>;
+  return (
+    <div>
+      <h1>{singleUserApi?.data?.email || "No Email Found"}</h1>
+    </div>
+  );
 }
 
 export default SingleUser;
