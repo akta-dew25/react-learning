@@ -37,3 +37,29 @@
 
 // let output = numbers.map((e) => (e % 2 === 0 && e % 4 !== 0 ? e : null));
 // console.log(output);
+
+var numbers = [10, 20, 30, 40, 50, 60, 70, 80, 90];
+
+var output = numbers.map((num, i) => {
+  if (num % 4 == 0 && num % 2 == 0) {
+    return num * 2;
+  } else {
+    return num;
+  }
+});
+// console.log(output);
+
+var output = numbers.map((num, i) =>
+  num % 4 == 0 && num % 2 == 0 ? num * 2 : num
+);
+// console.log(output);
+
+var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+var output = numbers.map((num, i) => {
+  if (num % 2 == 0) {
+    return num * num;
+  } else {
+    return num * num * num;
+  }
+});
+// console.log(output);

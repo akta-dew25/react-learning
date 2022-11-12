@@ -31,4 +31,35 @@ var names = ["kiran", "amlana", "nitya", "puja", "saswat", "ekta"];
 // console.log(output);
 
 var output = names.filter((name) => ["kiran", "nitya", "ekta"].includes(name));
-console.log(output);
+// console.log(output);
+
+var numbers = [10, 20, 30, 40, 50, 60, 70, 80, 90];
+
+var output = numbers.filter((num) => num > 60 || num < 30);
+// console.log(output);
+
+var empdetails = [
+  { empid: 101, name: "raaju", age: 22, dept: "testing", city: "Bangalore" },
+  { empid: 102, name: "rahul", age: 36, dept: "development", city: "Chennai" },
+  { empid: 103, name: "raghav", age: 26, dept: "UX", city: "Bangalore" },
+  {
+    empid: 104,
+    name: "rohit",
+    age: 44,
+    dept: "development",
+    city: "Bangalore",
+  },
+  {
+    empid: 105,
+    name: "ramesh",
+    age: 52,
+    dept: "development",
+    city: "Hyderabad",
+  },
+  { empid: 106, name: "rohan", age: 35, dept: "testing", city: "Chennai" },
+];
+
+var getEmployees = empdetails.filter(
+  (emp) => emp.dept == "UX" || emp.dept == "testing"
+);
+console.log(getEmployees);

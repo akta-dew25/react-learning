@@ -1,25 +1,25 @@
-// var names = [
-//   "A",
-//   "B",
-//   "C",
-//   "E",
-//   "F",
-//   "I",
-//   "O",
-//   "U",
-//   "M",
-//   "N",
-//   "G",
-//   "F",
-//   "B",
-//   "C",
-//   "D",
-// ];
+var names = [
+  "A",
+  "B",
+  "C",
+  "E",
+  "F",
+  "I",
+  "O",
+  "U",
+  "M",
+  "N",
+  "G",
+  "F",
+  "B",
+  "C",
+  "D",
+];
 
-// const vowels = ["A", "E", "I", "O", "U"];
+const vowels = ["A", "E", "I", "O", "U"];
 
-// let value = names.map((e) => (vowels.includes(e) ? e : null));
-// console.log(value);
+let value = names.map((e) => (vowels.includes(e) ? e : null));
+console.log(value);
 
 // var names = ["ekta", "kiran", "nitya", "saswat", "pooja"];
 
