@@ -1,10 +1,13 @@
 //returning array from reduce
+
+const movies = require("./movies.json");
 var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 var output = numbers.reduce((result, currentNum) => {
   result.push(currentNum * currentNum);
   return result;
 }, []);
 
+console.log(movies);
 // console.log(output);
 
 //returning object from reduce
@@ -52,79 +55,4 @@ let deptEmp = employees.reduce((result, currEmp) => {
   return result;
 }, {});
 
-console.log(deptEmp);
-
-var movies = [
-  {
-    name: "Gajini",
-    year: 2008,
-    budget: 3000,
-    collection: 90000,
-    producer: "kiran",
-    direction: "ekta",
-  },
-  {
-    name: "Student of the year",
-    year: 2012,
-    budget: 34000,
-    collection: 30000,
-    producer: "ekta",
-    direction: "kiran",
-  },
-  {
-    name: "Chichore",
-    year: 2019,
-    budget: 10000,
-    collection: 2000,
-    producer: "nitya",
-    direction: "pooja",
-  },
-  {
-    name: "Brahmastra",
-    year: 2022,
-    budget: 9000,
-    collection: 17500,
-    producer: "pooja",
-    direction: "Kiran",
-  },
-  {
-    name: "Swadesh",
-    year: 2013,
-    budget: 7000,
-    collection: 7500,
-    producer: "nitya",
-    direction: "ekta",
-  },
-  {
-    name: "PK",
-    year: 2012,
-    budget: 3000,
-    collection: 4000,
-    producer: "ekta",
-    direction: "nitya",
-  },
-  {
-    name: "Hum",
-    year: 2018,
-    budget: 6000,
-    collection: 12000,
-    producer: "kiran",
-    direction: "pooja",
-  },
-  {
-    name: "KGF",
-    year: 2022,
-    budget: 3000,
-    collection: 9000,
-    producer: "saswat",
-    direction: "jatin",
-  },
-  {
-    name: "Hate Story",
-    year: 2008,
-    budget: 1000,
-    collection: 2000,
-    producer: "saswat",
-    direction: "pooja",
-  },
-];
+// console.log(deptEmp);
