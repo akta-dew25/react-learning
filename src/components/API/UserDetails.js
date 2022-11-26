@@ -7,6 +7,7 @@ function SingleUser({ id }) {
 
   const getUser = async (userid) => {
     let userDetails = await axios.get(`https://reqres.in/api/users/${userid}`);
+    console.log(userDetails);
     setSingleUserApi(userDetails?.data);
   };
   useEffect(() => {
