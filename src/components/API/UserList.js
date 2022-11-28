@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 // import "./App.css";
-import SingleUser from "./SingleUser";
+import UserDetails from "./UserDetails";
 import UserList from "../Style/UserList.css";
 import axios from "axios";
-import Modal from "antd/lib/modal/Modal";
-import { Button, Table } from "antd";
+// import Modal from "antd/lib/modal/Modal";
+import { Button, Table, Modal } from "antd";
 
 function App() {
   const [userList, setUserList] = useState([]);
@@ -19,6 +19,7 @@ function App() {
     let userData = await axios.get(`https://reqres.in/api/users`);
 
     const data = userData?.data?.data.map((row) => ({
+      id: row.id,
       image: row.avatar,
       fName: row.first_name,
       lName: row.last_name,
@@ -76,34 +77,43 @@ function App() {
       title: "User Details",
       dataIndex: "details",
       key: "details",
+      render: (_, record) => {
+        console.log({ record });
+        return (
+          <Button type="primary" onClick={() => setSelectedUser(record?.id)}>
+            Details
+          </Button>
+        );
+      },
     },
   ];
 
   return (
     <>
       {/* {selectedUser ? <SingleUser id={selectedUser} /> : null} */}
-      <Button type="primary" onClick={() => openModal()}>
-        Details
-      </Button>
+
       <Table columns={columns} dataSource={userList} pagination={false} />
       <Modal
-        title="Basic Modal"
-        open={isOpenUser}
-        onOk={() => {
-          setIsOpenUser(!isOpenUser);
-        }}
-        onCancel={() => {
-          setIsOpenUser(!isOpenUser);
-        }}
+        title="User List"
+        open={selectedUser !== null}
+        onCancel={() => setSelectedUser(null)}
+        className="user"
+        onOk={() => setSelectedUser(null)}
+        closeIcon={
+          <div
+            onClick={() => {
+              setIsOpenUser(false);
+            }}
+          >
+            X
+          </div>
+        }
       >
-        <h1>Hello</h1>
-        {/* {selectedUser ? (
-          <SingleUser
-            id={selectedUser}
-            // modalData={modalData}
-            setIsModalVisible={setIsModalVisible}
-          />
-        ) : null} */}
+        <UserDetails
+          id={selectedUser}
+          // modalData={modalData}
+          // setIsModalVisible={setIsModalVisible}
+        />
       </Modal>
     </>
   );

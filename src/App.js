@@ -18,7 +18,7 @@ import Operator from "./components/other/Operator";
 import Get from "./components/API/Get";
 import Post from "./components/API/Post";
 import UserList from "./components/API/UserList";
-import MyModal from "./components/API/MyModal";
+import MyModal from "./components/API/modal";
 
 function App() {
   return (
@@ -42,6 +42,8 @@ function App() {
     
       <Get />
       <Post />
+      <Modal />
+
       <UserList />
   */}
       <MyModal />
