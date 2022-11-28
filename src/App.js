@@ -18,6 +18,7 @@ import Operator from "./components/other/Operator";
 import Get from "./components/API/Get";
 import Post from "./components/API/Post";
 import UserList from "./components/API/UserList";
+import MyModal from "./components/API/MyModal";
 
 function App() {
   return (
@@ -41,8 +42,9 @@ function App() {
     
       <Get />
       <Post />
-  */}
       <UserList />
+  */}
+      <MyModal />
     </div>
   );
 }

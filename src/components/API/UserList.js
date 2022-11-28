@@ -34,8 +34,12 @@ function App() {
   }, []);
 
   const openModal = () => {
-    setIsOpenUser(true);
+    setIsOpenUser(!isOpenUser);
   };
+
+  useEffect(() => {
+    alert(isOpenUser);
+  }, [isOpenUser]);
 
   const columns = [
     {
@@ -78,12 +82,21 @@ function App() {
   return (
     <>
       {/* {selectedUser ? <SingleUser id={selectedUser} /> : null} */}
-      <Button type="primary" onClick={openModal}>
+      <Button type="primary" onClick={() => openModal()}>
         Details
       </Button>
       <Table columns={columns} dataSource={userList} pagination={false} />
-      <Modal title="Basic Modal" visible={isOpenUser}>
-        hello
+      <Modal
+        title="Basic Modal"
+        open={isOpenUser}
+        onOk={() => {
+          setIsOpenUser(!isOpenUser);
+        }}
+        onCancel={() => {
+          setIsOpenUser(!isOpenUser);
+        }}
+      >
+        <h1>Hello</h1>
         {/* {selectedUser ? (
           <SingleUser
             id={selectedUser}
